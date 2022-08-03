@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import UsersData from "../databases/users.json";
+import { useNavigate } from "react-router-dom";
 
 // console.log(UsersData);
 
 const Login = () => {
+  let navigator = useNavigate();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,6 +24,7 @@ const Login = () => {
 
     if (registeredUsers.length > 0) {
       alert("successfully registered");
+      navigator("/home");
     } else {
       alert("enter correct credentials");
     }
