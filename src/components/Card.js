@@ -12,13 +12,34 @@ const Card = (props) => {
               <div className="card-body">
                 <h5 className="card-title">{item.dishName}</h5>
                 <p className="card-text">{item.description}</p>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  style={{
+                    background: item.id === props.first ? "orange" : "white",
+                  }}
+                  type="button"
+                  className="btn btn-sm"
+                  onClick={() => props.handle1(item.id)}
+                >
                   1
                 </button>
-                <button type="button" className="btn btn-primary btn-sm mx-2">
+                <button
+                  style={{
+                    background: item.id === props.second ? "red" : "white",
+                  }}
+                  type="button"
+                  className="btn btn-sm mx-2"
+                  onClick={() => props.handle2(item.id)}
+                >
                   2
                 </button>
-                <button type="button" className="btn btn-primary btn-sm">
+                <button
+                  style={{
+                    background: item.id === props.third ? "blue" : "white",
+                  }}
+                  type="button"
+                  className="btn  btn-sm"
+                  onClick={() => props.handle3(item.id)}
+                >
                   3
                 </button>
               </div>
