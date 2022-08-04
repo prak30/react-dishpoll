@@ -5,9 +5,9 @@ import Card from "./Card";
 const VotingPage = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [first, setFirst] = useState(1);
-  const [second, setSecond] = useState(2);
-  const [third, setThird] = useState(3);
+  const [first, setFirst] = useState(null);
+  const [second, setSecond] = useState(null);
+  const [third, setThird] = useState(null);
 
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/syook/react-dishpoll/main/db.json")
@@ -37,6 +37,8 @@ const VotingPage = () => {
       setThird(e);
     }
   };
+
+  console.log(data);
 
   return (
     <div>
