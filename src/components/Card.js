@@ -4,7 +4,7 @@ const Card = (props) => {
   console.log(props.data);
   // console.log(props.data[1].dishName);
   return (
-    <div>
+    <div className="d-flex flex-wrap mx-5 px-2 ">
       {props.data.length > 0
         ? props.data.map((item) => (
             <div className="card" style={{ width: "18rem" }}>
@@ -12,9 +12,15 @@ const Card = (props) => {
               <div className="card-body">
                 <h5 className="card-title">{item.dishName}</h5>
                 <p className="card-text">{item.description}</p>
-                <a className="btn btn-primary btn-sm">1</a>
-                <a className="btn btn-primary btn-sm mx-2">2</a>
-                <a className="btn btn-primary btn-sm">3</a>
+                <button type="button" className="btn btn-primary btn-sm">
+                  1
+                </button>
+                <button type="button" className="btn btn-primary btn-sm mx-2">
+                  2
+                </button>
+                <button type="button" className="btn btn-primary btn-sm">
+                  3
+                </button>
               </div>
             </div>
           ))
