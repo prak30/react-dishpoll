@@ -14,7 +14,7 @@ const Card = (props) => {
                 <p className="card-text">{item.description}</p>
                 <button
                   style={{
-                    background: item.id === props.first ? "orange" : "white",
+                    background: item.id === props.first ? "blue" : "red",
                   }}
                   type="button"
                   className="btn btn-sm"
@@ -24,7 +24,7 @@ const Card = (props) => {
                 </button>
                 <button
                   style={{
-                    background: item.id === props.second ? "red" : "white",
+                    background: item.id === props.second ? "blue" : "red",
                   }}
                   type="button"
                   className="btn btn-sm mx-2"
@@ -34,7 +34,7 @@ const Card = (props) => {
                 </button>
                 <button
                   style={{
-                    background: item.id === props.third ? "blue" : "white",
+                    background: item.id === props.third ? "blue" : "red",
                   }}
                   type="button"
                   className="btn  btn-sm"

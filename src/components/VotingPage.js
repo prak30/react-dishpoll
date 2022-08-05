@@ -46,16 +46,17 @@ const VotingPage = () => {
       {first !== null && second !== null && third !== null ? (
         <button onClick={submitHandler}>SUBMIT</button>
       ) : (
-        <Card
-          data={data}
-          first={first}
-          second={second}
-          third={third}
-          handle1={handle1}
-          handle2={handle2}
-          handle3={handle3}
-        />
+        <div></div>
       )}
+      <Card
+        data={data}
+        first={first}
+        second={second}
+        third={third}
+        handle1={handle1}
+        handle2={handle2}
+        handle3={handle3}
+      />
     </div>
   );
 };
